@@ -1,11 +1,11 @@
 import './App.css';
-import { TodoContainer } from './components/todoContainer/todoContainer';
+import { ProductCard } from './components/productCard/productCard';
 
 function App() {
 
   return (
     <>
-      <TodoContainer />
+      <ProductCard />
     </>
   );
 }
