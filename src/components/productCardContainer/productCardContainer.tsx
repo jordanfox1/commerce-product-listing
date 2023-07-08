@@ -1,5 +1,6 @@
 import { Product } from '../../types/product.interface';
 import { ProductCard } from '../productCard/productCard';
+import { JSX } from 'react';
 
 interface ProductCardContainerProps {
   productList: Product[];

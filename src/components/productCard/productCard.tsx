@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import { Product } from '../../types/product.interface';
 interface ProductCardProps {
   product: Product;
@@ -18,4 +19,4 @@ export const ProductCard = ({ product }: ProductCardProps): JSX.Element => {
       </div>
     </article>
   );
-}
+};
