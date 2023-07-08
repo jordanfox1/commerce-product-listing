@@ -10,7 +10,7 @@ interface ProductCardContainerProps {
 export const ProductCardContainer = ({ productList }: ProductCardContainerProps): JSX.Element => {
   return (
     <section className="product-card-container">
-      {productList.map((product, index) => (
+      {productList.map((product) => (
         <ProductCard key={product.productName} product={product} data-testid={`product-card`} />
       ))}
     </section>
