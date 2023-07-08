@@ -8,4 +8,5 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+  base: "/commerce-product-listing/"
 });
