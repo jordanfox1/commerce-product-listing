@@ -1,7 +1,7 @@
 import { Product } from '../../types/product.interface';
 import { JSX, useState } from 'react';
 import { filterProductList } from './filterBar.helper';
-
+import React from 'react';
 interface FilterBarProps {
   unfilteredProductList: Product[],
   onSelectedFilterChange: (filteredProducts: Product[]) => void;
@@ -19,17 +19,19 @@ export const FilterBar = ({ unfilteredProductList, onSelectedFilterChange }: Fil
 
     // pass the filtered products to the parent component
     onSelectedFilterChange(filteredProductList);
-    console.log(filteredProductList)
   };
 
   return (
     <section className="filter-bar-container">
       <select name="filter-dropdown" className="filter-dropdown" onChange={handleFilterChange}>
-        <option value="all-option">All</option>
-        <option value="name-option">Name</option>
-        <option value="price-option">Price</option>
-        <option value="type-option">Type</option>
-        <option value="on-sale-option">On Sale Now</option>
+        <option value="all">All</option>
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+        <option value="beer">Beer</option>
+        <option value="wine">Wine</option>
+        <option value="spirits">Spirits</option>
+        <option value="cider">Cider</option>
+        <option value="isSale">On Sale Now</option>
       </select>
     </section>
   );
