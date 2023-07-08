@@ -7,18 +7,18 @@ import { Product } from "../../types/product.interface";
  * @returns The filtered product list based on the selected option.
  */
 export const filterProductList = (selectedOption: string, productListToFilter: Product[]): Product[] => {
-    switch (selectedOption) {
-        case 'all':
-            return productListToFilter;
-        case 'name':
-            return orderProductListByName(productListToFilter);
-        case 'price':
-            return orderProductListByPrice(productListToFilter);
-        case 'isSale':
-            return productListToFilter.filter(product => product.isSale);
-        default:
-            return productListToFilter.filter(product => product.type.toLowerCase() === selectedOption.toLowerCase());
-    }
+  switch (selectedOption) {
+  case 'all':
+    return productListToFilter;
+  case 'name':
+    return orderProductListByName(productListToFilter);
+  case 'price':
+    return orderProductListByPrice(productListToFilter);
+  case 'isSale':
+    return productListToFilter.filter(product => product.isSale);
+  default:
+    return productListToFilter.filter(product => product.type.toLowerCase() === selectedOption.toLowerCase());
+  }
 };
 
 /**
@@ -27,8 +27,8 @@ export const filterProductList = (selectedOption: string, productListToFilter: P
  * @returns {Product[]} A new array representing the sorted product list sorted by name.
  */
 function orderProductListByName(productListToSort: Product[]) {
-    const sortedProductList = [...productListToSort].sort(compareProductNames);
-    return sortedProductList;
+  const sortedProductList = [...productListToSort].sort(compareProductNames);
+  return sortedProductList;
 }
 
 /**
@@ -38,14 +38,14 @@ function orderProductListByName(productListToSort: Product[]) {
  * @returns A negative value if a should be placed before b, a positive value if a should be placed after b, or 0 if they are equal.
  */
 function compareProductNames(currentProduct: Product, nextProduct: Product) {
-    if (currentProduct.productName < nextProduct.productName) {
-        return -1;
-    }
+  if (currentProduct.productName < nextProduct.productName) {
+    return -1;
+  }
 
-    if (currentProduct.productName > nextProduct.productName) {
-        return 1;
-    }
-    return 0;
+  if (currentProduct.productName > nextProduct.productName) {
+    return 1;
+  }
+  return 0;
 }
 
 /**
@@ -54,12 +54,12 @@ function compareProductNames(currentProduct: Product, nextProduct: Product) {
  * @returns new array representing product list sorted by price.
  */
 function orderProductListByPrice(productListToSort: Product[]) {
-    const sortedProductList = [...productListToSort].sort((a, b) => {
-        const priceA = parseFloat(a.price.replace('$', ''));
-        const priceB = parseFloat(b.price.replace('$', ''));
+  const sortedProductList = [...productListToSort].sort((a, b) => {
+    const priceA = parseFloat(a.price.replace('$', ''));
+    const priceB = parseFloat(b.price.replace('$', ''));
 
-        return priceA - priceB;
-    });
+    return priceA - priceB;
+  });
 
-    return sortedProductList;
+  return sortedProductList;
 }

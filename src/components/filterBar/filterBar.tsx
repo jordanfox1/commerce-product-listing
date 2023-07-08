@@ -2,6 +2,9 @@ import { Product } from '../../types/product.interface';
 import { JSX, useState } from 'react';
 import { filterProductList } from './filterBar.helper';
 import React from 'react';
+import ReactSearchBox from "react-search-box";
+import './filterBar.css';
+
 interface FilterBarProps {
   unfilteredProductList: Product[],
   onSelectedFilterChange: (filteredProducts: Product[]) => void;
@@ -9,8 +12,9 @@ interface FilterBarProps {
 
 export const FilterBar = ({ unfilteredProductList, onSelectedFilterChange }: FilterBarProps): JSX.Element => {
   const [selectedFilter, setSelectedFilter] = useState('');
+  const [searchedProductList, setSearchedProductList] = useState(unfilteredProductList);
 
-  const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleDropdownSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOption = event.target.value;
     setSelectedFilter(selectedOption);
 
@@ -21,9 +25,27 @@ export const FilterBar = ({ unfilteredProductList, onSelectedFilterChange }: Fil
     onSelectedFilterChange(filteredProductList);
   };
 
+  const handleSearchChange = (event) => {
+    const userInput = event.target.value.toLowerCase();
+
+    // Filter the product list based on the search value
+    const searchedProducts = unfilteredProductList.filter((product) => {
+      return product.productName.toLowerCase().includes(userInput)
+    });
+    setSearchedProductList(searchedProducts);
+
+    // Pass the filtered products to the parent component
+    onSelectedFilterChange(searchedProducts);
+  };
+
   return (
     <section className="filter-bar-container">
-      <select name="filter-dropdown" className="filter-dropdown" onChange={handleFilterChange}>
+      <input
+        placeholder="Search..."
+        onChange={handleSearchChange}
+        className="search-bar"
+      />
+      <select name="filter-dropdown" className="filter-dropdown" onChange={handleDropdownSelectChange}>
         <option value="all">All</option>
         <option value="name">Name</option>
         <option value="price">Price</option>
