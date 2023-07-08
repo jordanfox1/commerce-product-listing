@@ -9,6 +9,8 @@
 * start the server -  `pnpm dev`
 
 * run the tests -  `pnpm coverage` or `pnpm test`
+
+*Here is the current Test coverage* ![coverage](./src/assets/coverage.png)
 ### Potential Improvements
 * For a more realistic simulation of fetching data from a server, I would prefer to use [JSON server](https://github.com/typicode/json-server)  in the dev environment. I have chosen not to in this case, in order to deploy it more easily.
 
