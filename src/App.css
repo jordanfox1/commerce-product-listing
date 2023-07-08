@@ -14,7 +14,7 @@ body {
 
 /* Global Styles */
 body {
-    background-color: #f5f5f5;
+    background-color: #F5F5F5;
     margin: 0;
     padding: 0;
 }
@@ -24,9 +24,9 @@ p {
 }
 
 :root {
-    --secondary-color: #a5e265;
-    --highlight-color: #bde4a8;
-    --accent-color: #9cc69b;
-    --primary-color: #79b4a9;
-    --text-color: #676f54;
+    --secondary-color: #F2EAD3;
+    --highlight-color: #DFD7BF;
+    --accent-color: #DFD7BF;
+    --primary-color: #3F2305;
+    --text-color: #3F2305;
 }
