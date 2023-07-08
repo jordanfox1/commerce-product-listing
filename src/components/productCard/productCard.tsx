@@ -12,7 +12,7 @@ export const ProductCard = ({ product }: ProductCardProps): JSX.Element => {
   };
 
   const handleImageError = () => {
-    console.error('Image not found')
+    console.error('Image not found');
   };
 
   return (

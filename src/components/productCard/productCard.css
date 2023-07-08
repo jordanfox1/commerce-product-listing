@@ -21,7 +21,8 @@
 .product-card span {
     align-self: flex-start;
     background-color: var(--text-color);
-    color: var(--highlight-color);;
+    color: var(--highlight-color);
+    ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     font-weight: 700;
