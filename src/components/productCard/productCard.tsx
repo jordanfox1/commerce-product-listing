@@ -5,12 +5,17 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps): JSX.Element => {
   return (
-    <div className="product-card">
+    <article className="product-card">
       {product.isSale && <span>Sale</span>}
 
-      <img src={product.productImage} alt="A picture of the listed product" />
-      <h2>{product.productName}</h2>
-      <p>{`${product.price}`}</p>
-    </div>
+      <figure className="product-image">
+        <img src={product.productImage} alt="A picture of the listed product" />
+      </figure>
+
+      <div className="product-details">
+        <p>{product.productName}</p>
+        <p>{`${product.price}`}</p>
+      </div>
+    </article>
   );
 }

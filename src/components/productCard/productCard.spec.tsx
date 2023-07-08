@@ -6,7 +6,7 @@ describe('ProductCard', () => {
   beforeEach(() => {
     cleanup(); // Clear the DOM before each test
   });
-  
+
   const product = {
     index: 1,
     isSale: true,
