@@ -1,4 +1,6 @@
 # Commerce product listing
+
+### [visit deployed website](https://jordanfox1.github.io/commerce-product-listing/)
 ### How to start the server locally
 * Copy the repo and cd into the root directory
 
