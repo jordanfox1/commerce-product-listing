@@ -1,1 +1,32 @@
+/* color pallette
+* A5E265
+* BDE4A8
+* 9CC69B
+* 79B4A9
+* 676F54
+*/
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Global Styles */
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+:root {
+    --secondary-color: #a5e265;
+    --highlight-color: #bde4a8;
+    --accent-color: #9cc69b;
+    --primary-color: #79b4a9;
+    --text-color: #676f54;
+}

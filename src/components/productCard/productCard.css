@@ -1,0 +1,21 @@
+.product-card {
+    background-color: var(--highlight-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .product-image {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.product-card .product-details {
+    color: var(--text-color);
+}
+
+.product-card span {
+    background-color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
