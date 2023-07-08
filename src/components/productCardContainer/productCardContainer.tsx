@@ -10,7 +10,7 @@ export const ProductCardContainer = ({ productList }: ProductCardContainerProps)
   return (
     <section className="product-card-container">
       {productList.map((product, index) => (
-        <ProductCard key={product.productName} product={product} data-testid={`product-card-${index}`} />
+        <ProductCard key={product.productName} product={product} data-testid={`product-card`} />
       ))}
     </section>
   );

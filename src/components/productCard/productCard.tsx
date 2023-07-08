@@ -6,7 +6,7 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps): JSX.Element => {
   return (
-    <article className="product-card">
+    <article role="product-card" className="product-card">
       {product.isSale && <span>Sale</span>}
 
       <figure className="product-image">

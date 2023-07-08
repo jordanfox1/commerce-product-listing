@@ -56,7 +56,7 @@ describe('ProductCardContainer', () => {
 
   it('Should render the correct number of products based on the input list', () => {
     render(<ProductCardContainer productList={productList} />);
-    const productCards = screen.getAllByRole('article');
+    const productCards = screen.getAllByRole('product-card');
     expect(productCards.length).toBe(productList.length);
   });
 });
