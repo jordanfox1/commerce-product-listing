@@ -1,4 +1,6 @@
-export const productList = [{
+import { Product } from "../types/product.interface";
+
+export const productList: Product[] = [{
     "index": 0,
     "isSale": false,
     "price": "$49.99",
