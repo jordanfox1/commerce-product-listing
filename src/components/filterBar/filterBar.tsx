@@ -30,7 +30,7 @@ export const FilterBar = ({ unfilteredProductList, onSelectedFilterChange }: Fil
 
     // Filter the product list based on the search value
     const searchedProducts = unfilteredProductList.filter((product) => {
-      return product.productName.toLowerCase().includes(userInput)
+      return product.productName.toLowerCase().includes(userInput);
     });
     setSearchedProductList(searchedProducts);
 
