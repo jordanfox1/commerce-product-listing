@@ -2,7 +2,6 @@ import { Product } from '../../types/product.interface';
 import { JSX, useState } from 'react';
 import { filterProductList } from './filterBar.helper';
 import React from 'react';
-import ReactSearchBox from "react-search-box";
 import './filterBar.css';
 
 interface FilterBarProps {

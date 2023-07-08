@@ -95,7 +95,7 @@ describe('ProductsPage', () => {
         render(<ProductsPage />);
         const searchBar = screen.getByRole('textbox');
 
-        await userEvent.type(searchBar, "Pure Blonde Crate")
+        await userEvent.type(searchBar, "Pure Blonde Crate");
 
         await waitFor(() => {
           expect(screen.getAllByRole('product-card')).toHaveLength(1);
@@ -106,12 +106,12 @@ describe('ProductsPage', () => {
         render(<ProductsPage />);
         const searchBar = screen.getByRole('textbox');
 
-        await userEvent.type(searchBar, "Victoria Bitter")
+        await userEvent.type(searchBar, "Victoria Bitter");
 
         await waitFor(() => {
           expect(screen.getAllByRole('product-card')).toHaveLength(1);
         });
       });
-    })
+    });
   });
 });
